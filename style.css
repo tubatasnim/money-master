@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Merriweather:ital,wght@1,300&family=Montserrat&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,400;1,100&family=Spline+Sans:wght@400;600;700&family=Yeseva+One&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color:white;
+}
+#picture-style{
+    height: 650px;
+    width: 500px;
+    margin: 20px;
+    /* margin-top: 70px; */
+   
+}
+.Input-section{
+    background-color: 
+    #F8F8F8;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+.income-input{
+   margin-left:150px;
+   margin-top: 30px;
+}
+
+
+    
+
+   
+
+
