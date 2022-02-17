@@ -1,3 +1,4 @@
+//calculate button handle
 document.getElementById('calculator-button').addEventListener('click', function () {
     //get income money
     const userIncomeMoney = document.getElementById('income-money');
@@ -27,11 +28,6 @@ document.getElementById('calculator-button').addEventListener('click', function 
     //total expenses
     const totalExpenses = (foodAmount + rentAmount + clothesAmount);
 
-    //error msg
-    // if (userMoney != 'number') {
-    //     console.log('give me a number ');
-    // }
-    //total expencenses input value
     const expensesTotal = document.getElementById('total-expenses');
     expensesTotal.innerText = totalExpenses;
 
@@ -50,21 +46,13 @@ document.getElementById('calculator-button').addEventListener('click', function 
     else if (incomeAmount < 0 || foodAmount < 0 || rentAmount < 0 || clothesAmount < 0) {
         return alert('please write a positive number');
     }
+    // total expenses besi hole incomer theke 
     else if (incomeAmount < totalExpenses) {
         return alert('please give income Amount getterthan total expenses');
     }
-    else if (incomeAmount < totalExpenses) {
-        return alert('please give income Amount getterthan total expenses');
-    }
-
-
 
 })
-
-
-
-
-
+//saving button handel
 function saving() {
     let savingValue = document.getElementById('save-percentage');
     const savingValueText = savingValue.value;
@@ -74,25 +62,22 @@ function saving() {
     const userMoney = userIncomeMoney.value;
     const incomeAmount = parseFloat(userMoney);
     let remainingValue = document.getElementById('remain-total');
-
     let balanceTotal = document.getElementById('total-balance');
-    // const userBalanceTotalMoney = balanceTotal.value;
-
 
     savingAmount.innerText = Number(incomeAmount) / 100 * Number(savingValue.value);
     remainingValue.innerText = Number(balanceTotal.innerText) - Number(savingAmount.innerText);
     savingValue.value = '';
-
+    //error massege number
     if (isNaN(savingValueAmount)) {
         return alert('please give a number');
     }
+    //error massege for nagative nbr
     else if (savingValueAmount < 0) {
         return alert('please write a positive number');
     }
-    // else if (savingAmount > newBalanceTotal) {
-    //     return alert('please give remaining balance getterthan balance ');
-    // }
-
+    else if (remainingValue < 0) {
+        return alert('please give getterthan saving ammount');
+    }
 
 }
 
