@@ -18,22 +18,24 @@ body{
     #F8F8F8;
     margin-top: 20px;
     margin-bottom: 20px;
+   
     
 }
 /* income and expenses input */
 .income-input{
    margin-left:150px;
    margin-top: 30px;
+   margin-right: 10px;
   
 }
 /* mobile divice responsive */
- @media only screen and (min-width: 300px) {
+ @media only screen and (min-width: 350px) {
     .Input-section{
         text-align:center;
         margin-left: 80px;
+       
     }
     .income-input{
-      
        text-align:center;
        margin-left: 10px;
     }
@@ -49,8 +51,9 @@ body{
 @media only screen and (min-width: 600px)  {
     .Input-section{
         margin-left:0px;
+      text-decoration: none;
     }
-    
+   
 }
 
     
