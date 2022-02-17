@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Merriweather:ital,wght@1,300&family=Montserrat&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,400;1,100&family=Spline+Sans:wght@400;600;700&family=Yeseva+One&display=swap');
-
+/* font family add */
 body{
     font-family: 'Poppins', sans-serif;
     background-color:white;
 }
+/* img stysle */
 #picture-style{
     height: 650px;
     width: 500px;
@@ -11,6 +12,7 @@ body{
     /* margin-top: 70px; */
    
 }
+/* input section css style */
 .Input-section{
     background-color: 
     #F8F8F8;
@@ -18,11 +20,13 @@ body{
     margin-bottom: 20px;
     
 }
+/* income and expenses input */
 .income-input{
    margin-left:150px;
    margin-top: 30px;
   
 }
+/* mobile divice responsive */
  @media only screen and (min-width: 300px) {
     .Input-section{
         text-align:center;
@@ -41,6 +45,7 @@ body{
     } 
     
 } 
+/* laptop divice responcive */
 @media only screen and (min-width: 600px)  {
     .Input-section{
         margin-left:0px;
