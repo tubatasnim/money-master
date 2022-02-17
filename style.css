@@ -28,6 +28,22 @@ body{
    margin-right: 10px;
   
 }
+.notify-section{
+    width: 35%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    
+}
+.notify {
+    background: #222436;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 5px 20px;
+    /* display: none; */
+}
 /* mobile divice responsive */
  @media only screen and (min-width: 350px) {
     .Input-section{

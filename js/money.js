@@ -3,7 +3,7 @@ document.getElementById('calculator-button').addEventListener('click', function 
     const userIncomeMoney = document.getElementById('income-money');
     const userMoney = userIncomeMoney.value;
     const incomeAmount = parseFloat(userMoney);
-    userIncomeMoney.value = '';
+
 
     //get food money
     const userFoodMoney = document.getElementById('food-money');
@@ -38,36 +38,62 @@ document.getElementById('calculator-button').addEventListener('click', function 
     //balance total
     const balanceTotal = document.getElementById('total-balance');
     balanceTotalText = balanceTotal.innerText;
-    const NewBalanceTotal = incomeAmount - totalExpenses;
-    balanceTotal.innerText = NewBalanceTotal;
+    const newBalanceTotal = incomeAmount - totalExpenses;
+    balanceTotal.innerText = newBalanceTotal;
+
+    //error number massege handle
+
+    if (isNaN(incomeAmount) || isNaN(foodAmount) || isNaN(rentAmount) || isNaN(clothesAmount)) {
+        return alert('please give a number');
+    }
+    //error nagetive number massege handle
+    else if (incomeAmount < 0 || foodAmount < 0 || rentAmount < 0 || clothesAmount < 0) {
+        return alert('please write a positive number');
+    }
+    else if (incomeAmount < totalExpenses) {
+        return alert('please give income Amount getterthan total expenses');
+    }
+    else if (incomeAmount < totalExpenses) {
+        return alert('please give income Amount getterthan total expenses');
+    }
+
 
 
 })
 
-// saving part
-document.getElementById('save-total').addEventListener('click', function () {
-    // console.log('save clicked');
-    // const savePecentage = document.getElementById('save-percentage');
-    // const savePecentageText = savePecentage.value;
-    // const saveMoney = parseFloat(savePecentageText);
-    // const savingsTotal = saveMoney % balanceTotal;
-    // savePecentage.innerText = savingsTotal;
-    // savePecentage.value = '';
-    // //save amount
-    // const saveTotal = document.getElementById('save-amount');
-    savingsTotalAmount();
 
-    function getSaveAmount() {
-        const savePecentage = document.getElementById('save-percentage');
-        const savePecentageText = parseFloat(savePecentage.value);
-        return savePecentageText;
+
+
+
+function saving() {
+    let savingValue = document.getElementById('save-percentage');
+    const savingValueText = savingValue.value;
+    const savingValueAmount = parseFloat(savingValueText);
+    let savingAmount = document.getElementById('save-amount');
+    const userIncomeMoney = document.getElementById('income-money');
+    const userMoney = userIncomeMoney.value;
+    const incomeAmount = parseFloat(userMoney);
+    let remainingValue = document.getElementById('remain-total');
+
+    let balanceTotal = document.getElementById('total-balance');
+    // const userBalanceTotalMoney = balanceTotal.value;
+
+
+    savingAmount.innerText = Number(incomeAmount) / 100 * Number(savingValue.value);
+    remainingValue.innerText = Number(balanceTotal.innerText) - Number(savingAmount.innerText);
+    savingValue.value = '';
+
+    if (isNaN(savingValueAmount)) {
+        return alert('please give a number');
     }
-    function savingsTotalAmount() {
-        const saveMoney = getSaveAmount() % balanceTotalText.value;
-        console.log(saveMoney);
-
-
-
+    else if (savingValueAmount < 0) {
+        return alert('please write a positive number');
     }
+    // else if (savingAmount > newBalanceTotal) {
+    //     return alert('please give remaining balance getterthan balance ');
+    // }
 
-})
+
+}
+
+
